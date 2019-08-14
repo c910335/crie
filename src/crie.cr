@@ -1,12 +1,12 @@
 class Crie
   VERSION = "0.1.0"
-  CT_ROOT = { "_keep" => nil }
+  CT_ROOT = {"_keep" => nil}
 
   macro add(pattern)
     {% node = CT_ROOT %}
     {% for char in pattern.chars %}
       {% if !node[char] %}
-        {% node[char] = { "_keep" => nil} %}
+        {% node[char] = {"_keep" => nil} %}
       {% end %}
       {% node = node[char] %}
     {% end %}
@@ -39,17 +39,17 @@ class Crie
     {% c = 0 %}
     {% for char in pattern.chars %}
       {% if node[char] %}
-        {% c = c + 1%}
+        {% c = c + 1 %}
         {% node = node[char] %}
       {% else %}
-        {% node = { "_keep" => nil } %}
+        {% node = {"_keep" => nil} %}
       {% end %}
     {% end %}
     {{c}}
   end
 
   macro __to_named_tuple(node)
-    {% if node.size == 1%}
+    {% if node.size == 1 %}
       NamedTuple.new
     {% else %}
       {
