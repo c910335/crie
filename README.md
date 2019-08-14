@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.com/c910335/crie.svg?branch=master)](https://travis-ci.com/c910335/crie)
 [![GitHub license](https://img.shields.io/github/license/c910335/crie)](https://github.com/c910335/crie/blob/master/LICENSE)
 
-Compile-time Trie
+Compile-time Trie in Crystal
 
 ## Installation
 
