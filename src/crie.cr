@@ -26,6 +26,14 @@ class Crie
     {% end %}
   end
 
+  macro <<(pattern)
+    {% if pattern.is_a? ArrayLiteral %}
+      Crie.add_all({{pattern}})
+    {% else %}
+      Crie.add({{pattern}})
+    {% end %}
+  end
+
   macro search(pattern)
     {% node = CT_ROOT %}
     {% c = 0 %}
