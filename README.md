@@ -30,7 +30,7 @@ Crie.add_suffixes_of("Terrie Khala")
 # Searching in Compile-time
 Crie.search("En Taro Adun") # => 3
 Crie.search("Khala dora") # => 5
-Crie.search("Nas beru s'adarr") # => 0
+Crie.search("Nas beru uhn'adarr") # => 0
 
 # Searching in Running-time
 crie = Crie.new
