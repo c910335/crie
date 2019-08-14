@@ -19,10 +19,8 @@ class Crie
   end
 
   macro add_suffixes_of(pattern)
-    {% c = 0 %}
-    {% for char in pattern.chars %}
+    {% for c in 0...pattern.size %}
       Crie.add({{pattern[c..-1]}})
-      {% c = c + 1 %}
     {% end %}
   end
 
