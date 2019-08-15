@@ -22,17 +22,17 @@ Compile-time Trie in Crystal
 ```crystal
 require "crie"
 
-# Building Trie in Compile-time
+# Build Trie at compile time
 Crie << "En aru'din Raszagal"
 Crie << ["Khassar de templari", "Zhakul inok"]
 Crie.add_suffixes_of("Terrie Khala")
 
-# Searching in Compile-time
+# Search at compile time
 Crie.search("En Taro Adun") # => 3
 Crie.search("Khala dora") # => 5
 Crie.search("Nas beru uhn'adarr") # => 0
 
-# Searching in Running-time
+# Search at run time
 crie = Crie.new
 crie.search("Zhara ku'nuul") # => 3
 crie.search("Khas ara'shar") # => 4
