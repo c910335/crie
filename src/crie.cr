@@ -8,7 +8,7 @@ class Crie
       {% if !node[char] %}
         {% node[char] = {"_keep" => nil} %}
       {% end %}
-      {% node = node[char] %}
+      {% node = node[char] %} # ameba:disable Lint/UselessAssign
     {% end %}
   end
 
@@ -38,9 +38,9 @@ class Crie
     {% for char in pattern.chars %}
       {% if node[char] %}
         {% c = c + 1 %}
-        {% node = node[char] %}
+        {% node = node[char] %} # ameba:disable Lint/UselessAssign
       {% else %}
-        {% node = {"_keep" => nil} %}
+        {% node = {"_keep" => nil} %} # ameba:disable Lint/UselessAssign
       {% end %}
     {% end %}
     {{c}}
