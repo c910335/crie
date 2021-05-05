@@ -20,3 +20,7 @@ jobs:
       run: shards install
     - name: Run tests
       run: crystal spec
+    - name: Lint
+      run: crystal tool format --check
+    - name: Static code analysis
+      run: bin/ameba
